@@ -1,0 +1,55 @@
+<section>
+  <h3>Built-in Pipes</h3>
+  <hr />
+  <h4>Letras maiúsculas</h4>
+  <p>{{ nome | uppercase }}</p>
+  <br />
+  <h4>Letras minúsculas</h4>
+  <p>{{ nome | lowercase }}</p>
+  <br />
+  <h4>Título</h4>
+  <p>{{ nome | titlecase }}</p>
+  <br />
+  <h4>Data</h4>
+  <p>{{ date | date }}</p>
+  <br />
+  <h4>Data dd/MM/yyyy</h4>
+  <p>{{ date | date: 'dd/MM/yyyy' }}</p>
+  <h4>Data curta</h4>
+  <p>{{ date | date: 'short' }}</p>
+  <br />
+  <h4>Data completa</h4>
+  <p>{{ date | date: 'full' }}</p>
+  <br />
+  <h4>Percentual</h4>
+  <p>{{ percentual | percent }}</p>
+  <br />
+  <h4>Percentual</h4>
+  <p>{{ percentual | percent }}</p>
+  <br />
+  <h4>Percentual com parâmetro para casas decimais. 'casas a esquerda 1.n# min 0-2 n# max'</h4>
+  <p>{{ percentual | percent: '1.0-2' }}</p>
+  <br />
+  <h4>Salário - parametros code ou symbol</h4>
+  <p>{{ salario | currency: 'BRL': 'code': '1.2-5' }}</p>
+  <br />
+  <h4>JSON</h4>
+  <p>{{ user | json }}</p>
+  <br />
+  <h4>Sequência de Pipes - data + uppercase</h4>
+  <p>{{ date | date | uppercase }}</p>
+  <br />
+  <h4>Sequência de Pipes - Salário + lowercase</h4>
+  <p>{{ salario | currency: 'BRL' | lowercase }}</p>
+  <br />
+  <p>
+    Exercício Prático
+    1- Crie um componente pacientes dentro de ExerciciosModule.
+    2- Adicionar rota para este componente.
+    3- Criar uma interface para Paciente.
+    4- Criar array de pacientes dentro do componente.
+    5- Mostrar na tela todos dentro de uma tabela.
+    Extra 01- Adicione uma ação de deletar o paciente da tabela
+    Extra 02- Faça um formulário para cadastrar os pacientes dentro do array.
+  </p>
+</section>

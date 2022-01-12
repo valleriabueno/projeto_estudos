@@ -1,29 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Student } from './models/student';
-
+// Crie uma propriedade que é um array de links de imagens,
+// crie um botão para trocar a imagem para a próxima no array.
 @Component({
   selector: 'app-exercicio-um',
   templateUrl: './exercicio-um.component.html',
-  styleUrls: ['./exercicio-um.component.scss']
+  styleUrls: ['./exercicio-um.component.scss'],
 })
 export class ExercicioUmComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit(): void {}
-
-  //Ex1
-  idade: number = 0;
-
-  aumentar() {
-    this.idade++;
-  }
-
-  diminuir() {
-    this.idade--;
-  }
-
-  //Ex2
+  // PROPOSTA: DEIXAR AUTOMÁTICO O AVANÇO DE IMAGENS
   pictures = [
     'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     'https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=434&q=80',
@@ -41,14 +26,7 @@ export class ExercicioUmComponent implements OnInit {
     }
   }
 
-  //Ex3
-  estudante: Student = {} as Student;
+  constructor() {}
 
-  //Ex4
-  arrayImagem = [''];
-  addImagem(newImagem: string) {
-    if (newImagem) {
-      this.arrayImagem.push(newImagem);
-    }
-  }
+  ngOnInit(): void {}
 }

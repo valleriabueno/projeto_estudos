@@ -1,22 +1,9 @@
-<section>
-  <h2 [class.maior-idade]="idade >= 18">Componente - Exercício 2</h2>
-  <p>EX1 - No título acima foi utilizada uma property biding para estilização, melhor opção quando só há uma possibilidade de estilo, não é condicional por exemplo.</p>
-  <hr />
-  <h3 [ngClass]="{ 'maior-idade': idade >=18, 'menor-idade': idade < 18}">Teste de Estlização por Diretiva de Atributo, utilizando scss</h3>
-  <p>Utiliza-se o ngClass quando quer adicionar uma estilização baseada na classe css, dependendo de condições adicionadas na declaração da ngClass.</p>
-  <hr />
-  <p [ngClass]="{ 'maior-idade': idade >=18, 'menor-idade': idade < 18}">Idade: {{ idade }}</p>
-  <p *ngIf="idade >= 18">Maior de Idade. Este parágrafo está condicionado pelo ngIf - Diretiva Estrutural</p>
-  <p *ngIf="idade < 18">Menor de Idade. Este parágrafo está condicionado pelo ngIf - Diretiva Estrutural</p>
+<h2 [ngClass]="{ 'maior-idade': idade > 18, 'menor-idade': idade <= 18 }">
+  {{ idade }}
+</h2>
+<!-- <h2 [class.maior-idade]="idade > 18">{{ idade }}</h2> -->
+<p *ngIf="idade > 18">Maior de idade</p>
+<p *ngIf="idade <= 18">Menor de idade</p>
 
-  <button (click)="aumentar()">Aumentar</button>
-  <button (click)="diminuir()">Diminuir</button>
-  <br/>
-</section>
-
-<section>
-  <p>EX 2 - Crie uma propriedade que é um array de links de imagens. Crie um botão para trocar a imagem para a próxima no array.</p>
-  <img [src]="pictures[index]">
-  <button (click)="next()">Next</button>
-  <br />
-</section>
+<button (click)="diminuir()">-</button>
+<button (click)="aumentar()">+</button>

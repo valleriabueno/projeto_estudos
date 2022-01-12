@@ -1,60 +1,28 @@
 <section>
-  <h1>Notas de Aula</h1>
-  <hr />
-</section>
-<section>
   <h3>Interpolação</h3>
   <hr />
-  <p>Olá, sou {{ nome }}!</p>
-  <p>Seja bem-vinda, {{ nome }}</p>
-  <p>Olá, eu sou {{ nome }} e tenho {{ idade }} anos de idade!</p>
-  <p>Você tem {{ idade }} ano(s).</p>
-  <p>{{ nome | uppercase }}</p>
-  <p>Soma de 1 + 1 é: {{ 1 + 1 }}</p>
-  <p>Seu sobrenome é {{'Valle'}}</p>
-  <p>Seu ano de nascimento é: {{ calculaAnoNascimento()}}</p>
+  <p>{{ nome }}</p>
+  <p>Olá eu sou {{ nome }}.</p>
+  <p>Olá, eu sou {{ nome }} e tenho {{ idade }} anos.</p>
 </section>
 
 <section>
+  <h3>Property binding</h3>
   <hr />
-  <h3>Event Binding</h3>
+  <img [src]="link" [alt]="alt" [height]="altura" />
+  <!-- <img src="{{ link }}" /> -->
+</section>
+
+<section>
+  <h3>Event binding</h3>
   <hr />
   <button (click)="alerta()">Alertar</button>
-  <br />
-  <br />
-  <div>
-    <img
-    src="{{ linkImagem }}"
-    height="{{alturaImagem}}"
-    width="{{larguraImagem}}"
-    />
-    <br />
-  <p>{{ larguraImagem }} x {{ alturaImagem }}</p>
-  <button (click)="aumentar()">Aumentar</button>
-  <button (click)="diminuir()">Diminuir</button>
-  </div>
 </section>
 
 <section>
+  <h3>Two-way data binding</h3>
   <hr />
-  <h3>Property Binding</h3>
-  <hr />
-  <img [src]="link" />
-  <p>Não utiliza a interpolação para definir os valores das propriedades, mas chaves na própria propriedade e seus valores dentro de aspas.</p>
-  <p>Nesta situação trata-se apenas de uma melhor apresentação visual. Esta é a forma usual.</p>
-  <img
-    [src]="linkImagem"
-    [height]="alturaImagem"
-    [width]="larguraImagem"
-  />
-</section>
-
-<section>
-  <hr />
-  <h3>Two-way Data Binding</h3>
-  <hr />
-  <input type="text" [(ngModel)] = "nomeCompleto" />
-  <p>O valor digitado no campo input será mostrado no parágrafo</p>
+  <input type="text" [(ngModel)]="nomeCompleto" />
   <p>{{ nomeCompleto }}</p>
   <h4>Exemplo:</h4>
   <input type="text" [(ngModel)]="estudante.nomeCompleto" />
@@ -66,24 +34,10 @@
 </section>
 
 <section>
-  <hr />
-  <h3>Exercício 1</h3>
-  <p>- Defina Data binding.</p>
-  <p></p>
-  <br />
-  <p>- Qual a diferença entre Interpolação e Property Binding?</p>
-  <p>Interpolação: No geral, utilizado para chamar valores no html.
-    Property Binding: Utilizado para representar as propriedades .
+  <h3>Exercício</h3>
+  <p>
+    Crie uma propriedade idade do tipo number. Crie dois botões um para aumentar
+    a idade e outro para diminuir.
   </p>
-  <br />
-  <p>- O que são componentes? O que é necessário para criar um?</p>
-  <p>São building blocks que compõem a arquitetura do software. São chamados chamados no app.component.html para construir o site</p>
-  <br />
-</section>
-
-<section>
-  <h3>Exercício 2</h3>
-  <p>- Crie um novo component dentro do módulo exercicios -- exercicio-dois -- ng g c exercicios/exercicio-dois - OK</p>
-  <p>- Dentro do componente, crie uma propriedade idade do tipo number. Crie dois botões, um para aumentar a idade e outro para diminuir - OK</p>
-  <p>obs: Colocar ExercicioDoisComponent dentro do exports de exercicios.module - OK</p>
+  <hr />
 </section>

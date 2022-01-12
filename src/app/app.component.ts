@@ -3,20 +3,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  /*
-  //dados foram movidos para data-binding.component.ts
-  nome = 'Valéria';
-  idade = 36;
+  nome = 'José Almir';
+  idade = 25;
 
-  linkImagem = 'https://h5q4a2e9.stackpathcdn.com/wp-content/uploads/2016/08/balos-beach-1.jpg'
+  linkImagem =
+    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80';
 
   larguraImagem = 30;
   alturaImagem = 30;
 
-  // Função para calcular idade
   calculaAnoNascimento(): number {
     const today = new Date();
 
@@ -31,5 +29,5 @@ export class AppComponent {
   diminuir() {
     this.larguraImagem -= 20;
     this.alturaImagem -= 15;
-  }*/
+  }
 }

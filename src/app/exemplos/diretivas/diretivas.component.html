@@ -1,0 +1,71 @@
+<section>
+  <h3>*ngIf</h3>
+  <hr />
+  <p *ngIf="!oculto">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem numquam molestiae nulla officiis quam cumque.
+  </p>
+  <button (click)="ocultar()" [disabled]="oculto">Ocultar</button>
+</section>
+
+<section>
+  <h3>*ngFor</h3>
+  <p>Exemplo 1 - Simples</p>
+  <hr />
+  <ul>
+    <li *ngFor="let compra of compras">
+      {{ compra }}
+    </li>
+  </ul>
+</section>
+
+<section>
+  <p>Exemplo 2 - Com index</p>
+  <hr />
+  <ul>
+    <li *ngFor="let compra of compras, let i = index">
+      {{ i }} - {{ compra }}
+    </li>
+  </ul>
+</section>
+
+<section>
+  <p>Exemplo 3 - Com input</p>
+  <hr />
+  <input [(ngModel)]="alimento" placeholder="Digite um item" />
+  <button (click)="add()">Adicionar</button>
+  <ul>
+    <li *ngFor="let compra of compras, let i = index">
+      {{ i }} - {{ compra }}
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3>*ngSwitch</h3>
+  <p>Exemplo 1 - Alterando o status no component.ts</p>
+  <hr />
+  <div [ngSwitch]="status">
+    <p *ngSwitchCase="'loading'">Carregando...</p>
+    <p *ngSwitchCase="'error'">Ocorreu um erro...</p>
+    <p *ngSwitchCase="'data'">Os dados chegaram!</p>
+    <p *ngSwitchDefault>Problema desconhecido!</p>
+  </div>
+</section>
+
+<section>
+  <p>Exemplo 2 - Alterando pelo select</p>
+  <hr />
+  <select [(ngModel)]="status">
+    <!-- value é um item html, por isso apenas as aspas duplas -->
+    <option value="loading">Loading</option>
+    <option value="error">Error</option>
+    <option value="data">Dados</option>
+  </select>
+  <div [ngSwitch]="status">
+    <!-- por ser diretiva precisa adicionar aspas duplas, mais as aspas simples -->
+    <p *ngSwitchCase="'loading'">Carregando...</p>
+    <p *ngSwitchCase="'error'">Ocorreu um erro...</p>
+    <p *ngSwitchCase="'data'">Os dados chegaram!</p>
+    <p *ngSwitchDefault>Problema desconhecido!</p>
+  </div>
+</section>
