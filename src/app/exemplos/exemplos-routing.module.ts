@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
+import { AppGithubComponent } from './app-github/app-github.component';
+import { AppSorteioComponent } from './app-sorteio/app-sorteio.component';
 import { CriacaoPipesComponent } from './criacao-pipes/criacao-pipes.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
@@ -22,6 +24,14 @@ const routes: Route[] = [
   {
     path: 'criacao-pipes',
     component: CriacaoPipesComponent,
+  },
+  {
+    path: 'sorteios',
+    component: AppSorteioComponent,
+  },
+  {
+    path: 'github',
+    component: AppGithubComponent,
   },
 ];
 
