@@ -1,0 +1,15 @@
+<h2>Exemplo pipe - Filter</h2>
+<input
+  type="text"
+  placeholder="Buscar linguagem"
+  [(ngModel)]="query"
+/>
+<!-- <p>{{ linguagens | filter: "C" }}</p> -->
+<!-- DESAFIO: Pode buscar P ou p ou retorna Pyton normalmente -->
+
+<ul>
+  <li *ngFor="let lang of linguagens | filter: query">{{ lang }}</li>
+</ul>
+
+<h3 *ngFor="let num of numeros | inc">{{ num }}</h3>
+<button (click)="add()">Adicionar</button>

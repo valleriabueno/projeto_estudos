@@ -1,7 +1,9 @@
-import { DiretivasComponent } from './diretivas/diretivas.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+
+import { CriacaoPipesComponent } from './criacao-pipes/criacao-pipes.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Route[] = [
@@ -16,6 +18,10 @@ const routes: Route[] = [
   {
     path: 'pipes',
     component: PipesComponent,
+  },
+  {
+    path: 'criacao-pipes',
+    component: CriacaoPipesComponent,
   },
 ];
 
